@@ -1,0 +1,6 @@
+
+.input-text{box-sizing:border-box;border:solid 1px #ddd;width:10px;
+    -webkit-transition:all 0.2s linear 0s;
+       -moz-transition:all 0.2s linear 0s;
+         -o-transition:all 0.2s linear 0s;
+            transition:all 0.2s linear 0s}

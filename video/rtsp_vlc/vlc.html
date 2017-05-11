@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<!--[if IE]>
+   <object type='application/x-vlc-plugin' id='vlc' events='True'
+       classid='clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921' codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab" width="720" height="540">
+          <param name='mrl' value='rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp' />
+          <param name='volume' value='50' />
+          <param name='autoplay' value='true' />
+          <param name='loop' value='false' />
+          <param name='fullscreen' value='false' />
+    </object>
+<![endif]-->
+		<!--[if !IE]><!-->
+
+		<!--[if IE]>
+			classid='clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921' width="720" height="540">
+		<![endif]-->
+		<object type='application/x-vlc-plugin' id='vlc' events='True' width="720" height="540" pluginspage="http://www.videolan.org" codebase="http://downloads.videolan.org/pub/videolan/vlc-webplugins/2.2.2/npapi-vlc-2.2.2.tar.xz">
+        <param name='mrl' value='http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8' />
+        <!--http://10.221.100.56/hls/10.221.100.53/live/playlist.m3u8-->
+        <param name='volume' value='50' />
+        <param name='autoplay' value='true' />
+        <param name='loop' value='false' />
+        <param name='fullscreen' value='false' />
+   </object>
+
+		<script>
+			var vlc;
+
+			function initPlayUrl() {
+				vlc = document.getElementById("vlc");
+				var vedio_url = '这里是RMSP流地址';
+				itemId = vlc.playlist.add(vedio_url);
+				vlc.playlist.playItem(itemId);
+			}
+			initPlayUrl();
+		</script>
+
+		<!--<![endif]-->
+
+	</body>
+
+</html>
